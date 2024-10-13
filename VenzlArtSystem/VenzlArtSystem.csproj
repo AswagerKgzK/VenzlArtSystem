@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{8F8F54C9-62EF-4D35-A219-4D4B352A633A}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ValeryLite2</RootNamespace>
+    <AssemblyName>VenzlArtSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constructores y colecciones\Articulos.cs" />
+    <Compile Include="Constructores y colecciones\Clientes.cs" />
+    <Compile Include="Constructores y colecciones\Colecciones.cs" />
+    <Compile Include="Constructores y colecciones\Devolucion.cs" />
+    <Compile Include="Constructores y colecciones\Ventas.cs" />
+    <Compile Include="GrupoClientes\AgendaClientes.cs" />
+    <Compile Include="GrupoClientes\AgendaClientes.Designer.cs">
+      <DependentUpon>AgendaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GrupoClientes\AgregarCliente.cs" />
+    <Compile Include="GrupoClientes\AgregarCliente.Designer.cs">
+      <DependentUpon>AgregarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GrupoDevolucion_Compras\Devoluciones.cs" />
+    <Compile Include="GrupoDevolucion_Compras\Devoluciones.Designer.cs">
+      <DependentUpon>Devoluciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GrupoDevolucion_Compras\RealizarDevolucion.cs" />
+    <Compile Include="GrupoDevolucion_Compras\RealizarDevolucion.Designer.cs">
+      <DependentUpon>RealizarDevolucion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GrupoInventario\AgregarArticulo.cs" />
+    <Compile Include="GrupoInventario\AgregarArticulo.Designer.cs">
+      <DependentUpon>AgregarArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GrupoInventario\Inventario.cs" />
+    <Compile Include="GrupoInventario\Inventario.Designer.cs">
+      <DependentUpon>Inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GrupoVentas\Factura.cs" />
+    <Compile Include="GrupoVentas\Factura.Designer.cs">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GrupoVentas\FormaPago.cs" />
+    <Compile Include="GrupoVentas\FormaPago.Designer.cs">
+      <DependentUpon>FormaPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GrupoVentas\VenderProductos.cs" />
+    <Compile Include="GrupoVentas\VenderProductos.Designer.cs">
+      <DependentUpon>VenderProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GrupoVentas\VentasRealizadas.cs" />
+    <Compile Include="GrupoVentas\VentasRealizadas.Designer.cs">
+      <DependentUpon>VentasRealizadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Ayuda.cs" />
+    <Compile Include="Inicio\Ayuda.Designer.cs">
+      <DependentUpon>Ayuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\InicioMenu.cs" />
+    <Compile Include="Inicio\InicioMenu.Designer.cs">
+      <DependentUpon>InicioMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Program.cs" />
+    <Compile Include="Validaciones\MensajeAviso.cs" />
+    <Compile Include="Validaciones\MensajeAviso.Designer.cs">
+      <DependentUpon>MensajeAviso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validaciones\ValidarTextos.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GrupoClientes\AgendaClientes.resx">
+      <DependentUpon>AgendaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrupoClientes\AgregarCliente.resx">
+      <DependentUpon>AgregarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrupoDevolucion_Compras\Devoluciones.resx">
+      <DependentUpon>Devoluciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrupoDevolucion_Compras\RealizarDevolucion.resx">
+      <DependentUpon>RealizarDevolucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrupoInventario\AgregarArticulo.resx">
+      <DependentUpon>AgregarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrupoInventario\Inventario.resx">
+      <DependentUpon>Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrupoVentas\Factura.resx">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrupoVentas\FormaPago.resx">
+      <DependentUpon>FormaPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrupoVentas\VenderProductos.resx">
+      <DependentUpon>VenderProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrupoVentas\VentasRealizadas.resx">
+      <DependentUpon>VentasRealizadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Ayuda.resx">
+      <DependentUpon>Ayuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\InicioMenu.resx">
+      <DependentUpon>InicioMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Validaciones\MensajeAviso.resx">
+      <DependentUpon>MensajeAviso.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Constructores y colecciones" />
+    <Folder Include="GrupoClientes" />
+    <Folder Include="GrupoInventario" />
+    <Folder Include="Validaciones" />
+    <Folder Include="Inicio" />
+    <Folder Include="GrupoVentas" />
+    <Folder Include="GrupoDevolucion_Compras" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
